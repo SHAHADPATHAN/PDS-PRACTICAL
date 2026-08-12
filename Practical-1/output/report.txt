@@ -1,0 +1,36 @@
+============================================================
+ACCESS LOG ANALYSIS REPORT
+============================================================
+
+Total Records : 2060520
+Unique IP Addresses : 16680
+Unique Languages : 128
+Unique Event Types : 1227
+
+Top 10 IP Addresses
+IP_Address
+212.60.12.161      611856
+103.111.33.197     309913
+157.32.35.29       273546
+152.58.35.97       259022
+199.188.238.77     115716
+49.36.67.24         62078
+49.36.64.212        45718
+14.139.122.76       23933
+106.205.210.163     23038
+152.58.60.21        22055
+Name: count, dtype: int64
+
+Top Languages
+Language
+en                                     28561
+*                                       8127
+zh                                      6416
+en-GB,en;q=0.5                          4269
+en-US,en;q=0.5                          2785
+en US,en;q=0.9,sv;q=0.8                 2752
+en-US,en;q=0.9                          1971
+zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7     1346
+en-GB,en-US;q=0.9,en;q=0.8,gu;q=0.7     1153
+en-US,en                                 619
+Name: count, dtype: int64

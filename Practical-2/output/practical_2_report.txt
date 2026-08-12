@@ -1,0 +1,56 @@
+======================================================================
+PRACTICAL 2 : STRUCTURED LOG DATASET
+======================================================================
+
+OBJECTIVE
+To convert unstructured raw log data into a structured tabular dataset using Python and Pandas.
+
+SOURCE DATASET
+cj.log
+
+TOTAL VALID RECORDS
+2,060,520
+
+INVALID RECORDS
+911
+
+STRUCTURED COLUMNS
+- category_type
+- sub_key
+- timestamp
+- Client-IP-address
+- port
+- Browser-OS
+- language
+- meta-data
+
+UNIQUE IP ADDRESSES
+16,680
+
+TOP 10 IP ADDRESSES
+Client-IP-address
+212.60.12.161      611856
+103.111.33.197     309913
+157.32.35.29       273546
+152.58.35.97       259022
+199.188.238.77     115716
+49.36.67.24         62078
+49.36.64.212        45718
+14.139.122.76       23933
+106.205.210.163     23038
+152.58.60.21        22055
+Name: count, dtype: int64
+
+TOP 10 USER AGENTS
+Browser-OS
+gobuster/3.6                                                                                                                                                       1394715
+DirBuster-1.0-RC1 (http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)                                                                                 397212
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36                                                      65477
+NaN                                                                                                                                                                  26153
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)                                                                                                      20536
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36                                                            17189
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36                                                   16873
+gobuster/3.1.0                                                                                                                                                       13787
+Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)                                                                                       9204
+Mozilla/5.0 (Linux; Android 11; vivo 1906; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36 VivoBrowser/8.9.0.0       6142
+Name: count, dtype: int64

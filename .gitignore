@@ -1,0 +1,17 @@
+# Ignore Logs directory and Jupyter checkpoints
+Logs/
+.ipynb_checkpoints/
+checkpoints/
+__pycache__/
+*.py[cod]
+
+# Exclude large datasets over GitHub 100MB limit
+*.csv
+!Practical-1/output/sample_logs.csv
+!Practical-2/output/field_description.csv
+!Practical-2/output/structured_sample.csv
+
+# OS & temp files
+Thumbs.db
+desktop.ini
+.DS_Store

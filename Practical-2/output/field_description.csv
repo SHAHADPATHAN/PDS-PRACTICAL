@@ -1,0 +1,9 @@
+Field,Description
+category_type,Category or type of event
+sub_key,Additional event key or subtype
+timestamp,Date and time of the event
+Client-IP-address,IP address of the client
+port,Network port used by the client
+Browser-OS,"Browser, operating system or user-agent information"
+language,Language information
+meta-data,Additional metadata associated with the event
