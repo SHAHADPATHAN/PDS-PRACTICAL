@@ -1,0 +1,23 @@
+======================================================================
+PRACTICAL 4 : BASIC LOG CLASSIFICATION
+======================================================================
+
+Objective:
+Create labeled categories for log analysis using known attack patterns.
+
+Total Records: 1,491,163
+
+Label Distribution:
+         label   count  percentage
+        benign 1489861       99.91
+path_traversal    1062        0.07
+   brute_force     130        0.01
+          sqli     110        0.01
+
+Attack Detection Rules:
+SQL Injection: OR 1=1, UNION SELECT, SELECT FROM, INSERT INTO, DELETE FROM, DROP TABLE.
+Path Traversal: ../, ..\, %2e%2e, /etc/passwd.
+Brute Force: Five or more authentication-related records from the same IP.
+
+Dataset Limitation:
+The supplied cj.log dataset does not contain explicit URL, HTTP method, or status-code fields. Therefore, classification is based only on patterns available in the dataset.

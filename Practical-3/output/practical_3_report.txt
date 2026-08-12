@@ -1,0 +1,17 @@
+PRACTICAL 3 : DATA CLEANING AND PREPROCESSING
+======================================================================
+
+Original Input File : D:\PDS PRACTICAL\Practical-2\output\cj_cleaned.csv
+Final Number of Rows : 1,491,163
+Final Number of Columns : 8
+
+Cleaning Operations Performed:
+
+1. Timestamp converted to datetime format.
+2. Missing values handled.
+3. .html extension checked and normalized.
+4. String values converted to lowercase.
+5. Extra spaces removed.
+6. Column names cleaned.
+7. Duplicate records checked and removed.
+8. Final missing values checked.
