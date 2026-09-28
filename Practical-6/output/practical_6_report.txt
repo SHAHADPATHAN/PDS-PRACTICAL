@@ -1,0 +1,26 @@
+PRACTICAL 6 - DATASET BALANCING
+============================================================
+
+Objective:
+To handle an imbalanced dataset for fair ML and Deep Learning training.
+
+Original Distribution:
+benign: 1489861
+path_traversal: 1062
+brute_force: 130
+sqli: 110
+
+Balancing Technique:
+Random undersampling of the benign class while retaining all attack records.
+
+Final Binary Distribution:
+benign: 1302 (50.00%)
+attack: 1302 (50.00%)
+
+Attack Categories Preserved:
+path_traversal: 1062
+brute_force: 130
+sqli: 110
+
+Conclusion:
+The dataset was balanced by retaining all attack records and randomly undersampling benign records to the same total count. The resulting dataset contains the feature-engineered columns required for machine-learning training.

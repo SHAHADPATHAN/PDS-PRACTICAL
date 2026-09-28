@@ -1,0 +1,48 @@
+PRACTICAL 9 - SIMPLE CLASSIFIER TO DETECT ATTACKS
+======================================================================
+
+Objective:
+To build a simple machine-learning classifier to detect attacks using features generated in Practical 5 and the balanced dataset prepared in Practical 6.
+
+Input Dataset:
+balanced_dataset.csv from Practical 6
+
+Algorithm:
+Random Forest Classifier
+
+Target Classes:
+0 = Benign
+1 = Attack
+
+Train/Test Split:
+80% Training and 20% Testing
+
+Total Records: 2604
+Training Records: 2083
+Testing Records: 521
+Number of Features: 15
+
+Class Distribution:
+Benign: 1302 (50.00%)
+Attack: 1302 (50.00%)
+
+Model Accuracy:
+97.89%
+
+Confusion Matrix:
+[[253   8]
+ [  3 257]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.99      0.97      0.98       261
+      Attack       0.97      0.99      0.98       260
+
+    accuracy                           0.98       521
+   macro avg       0.98      0.98      0.98       521
+weighted avg       0.98      0.98      0.98       521
+
+
+Conclusion:
+A Random Forest classifier was trained using features generated during Practical 5. The balanced dataset prepared in Practical 6 was used for training and testing. The model was evaluated using accuracy, confusion matrix, precision, recall, and F1-score.

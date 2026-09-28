@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTINEL AI // Autonomous Log Intelligence & Security Analytics Platform</title>
+  <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Preloader / System Boot Sequence (Google / Microsoft Standards) -->
+  <div id="preloader">
+    <div class="preloader-hud-radar">
+      <div class="radar-ring radar-ring-1"></div>
+      <div class="radar-ring radar-ring-2"></div>
+      <div class="radar-ring radar-ring-3"></div>
+      <div class="radar-sweep"></div>
+      <!-- Bespoke Cyber Emblem SVG -->
+      <div class="preloader-core-icon">
+        <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="cyberGradPre" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffb800"/>
+              <stop offset="50%" stop-color="#ff6a00"/>
+              <stop offset="100%" stop-color="#ff2200"/>
+            </linearGradient>
+            <radialGradient id="coreGlowPre" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="40%" stop-color="#ff7a00"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+          </defs>
+          <path d="M20 2L35 9V20C35 29.5 28.5 37 20 40C11.5 37 5 29.5 5 20V9L20 2Z" stroke="url(#cyberGradPre)" stroke-width="2.5" stroke-linejoin="round" fill="rgba(255,106,0,0.12)"/>
+          <path d="M20 7L31 12.5V19.5C31 26.5 26.2 32.5 20 35C13.8 32.5 9 26.5 9 19.5V12.5L20 7Z" stroke="#ff7a00" stroke-width="1.2" stroke-dasharray="3 2" fill="none"/>
+          <circle cx="20" cy="20" r="5" fill="url(#coreGlowPre)"/>
+          <circle cx="20" cy="20" r="8" stroke="#ff8c1a" stroke-width="1" stroke-opacity="0.8"/>
+          <line x1="20" y1="10" x2="20" y2="30" stroke="#ff8c1a" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="10" y1="20" x2="30" y2="20" stroke="#ff8c1a" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="preloader-brand-title">SENTINEL <span>AI</span></div>
+    <div class="preloader-brand-sub">Enterprise Log Intelligence & Threat Analytics Platform</div>
+
+    <!-- Live Kernel Boot Log Matrix -->
+    <div class="preloader-terminal" id="preloader-terminal">
+      <div class="terminal-line"><span class="ok-badge">[OK]</span> <span class="accent">BOOT:</span> Sentinel Security Kernel v2.4.0 Initialized</div>
+    </div>
+
+    <!-- Progress Status & Bar -->
+    <div class="preloader-progress-box">
+      <div class="preloader-meta-row">
+        <span class="preloader-status-text" id="preloader-status">STARTING TELEMETRY STACK...</span>
+        <span class="preloader-pct-text" id="preloader-pct">0%</span>
+      </div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill" id="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <!-- Cyber Shield Vector Emblem -->
+          <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffb800"/>
+                <stop offset="50%" stop-color="#ff6a00"/>
+                <stop offset="100%" stop-color="#ff2200"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 2L35 9V20C35 29.5 28.5 37 20 40C11.5 37 5 29.5 5 20V9L20 2Z" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linejoin="round" fill="rgba(255,106,0,0.18)"/>
+            <path d="M20 7L31 12.5V19.5C31 26.5 26.2 32.5 20 35C13.8 32.5 9 26.5 9 19.5V12.5L20 7Z" stroke="#ff7a00" stroke-width="1.2" stroke-dasharray="2 2" fill="none"/>
+            <circle cx="20" cy="20" r="4" fill="#ffffff"/>
+            <circle cx="20" cy="20" r="7" stroke="#ff8c1a" stroke-width="1"/>
+            <line x1="20" y1="12" x2="20" y2="28" stroke="#ff8c1a" stroke-width="1" stroke-linecap="round"/>
+            <line x1="12" y1="20" x2="28" y2="20" stroke="#ff8c1a" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">SENTINEL <span>AI</span></div>
+          <div class="brand-subtitle">Enterprise Defense v2.4</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <div class="nav-category">Operations</div>
+        <li class="nav-item active" data-view="dashboard">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Executive Dashboard</span>
+        </li>
+        <li class="nav-item" data-view="pipeline">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Pipeline Control</span>
+        </li>
+        <li class="nav-item" data-view="upload">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span>Upload & Ingest Log</span>
+        </li>
+        <li class="nav-item" data-view="explorer">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Log Explorer</span>
+        </li>
+
+        <div class="nav-category">Threat Intelligence</div>
+        <li class="nav-item" data-view="attacks">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Attack Intelligence</span>
+        </li>
+        <li class="nav-item" data-view="ip-intel">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>IP Threat Dossier</span>
+        </li>
+        <li class="nav-item" data-view="incident">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Incident Workspace</span>
+        </li>
+
+        <div class="nav-category">AI & Machine Learning</div>
+        <li class="nav-item" data-view="ml">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <span>Machine Learning Hub</span>
+        </li>
+        <li class="nav-item" data-view="ai-analyst">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>AI Security Analyst</span>
+        </li>
+
+        <div class="nav-category">Diagnostics</div>
+        <li class="nav-item" data-view="quality">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Data Quality</span>
+        </li>
+        <li class="nav-item" data-view="system">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>System Health</span>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>SENTINEL Engine Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Stage -->
+    <main class="main-wrapper">
+      <header class="top-header">
+        <div class="header-title-box">
+          <h1 class="page-title" id="current-page-title">Executive Dashboard</h1>
+          <span class="header-badge">Live Telemetry</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-outline" onclick="document.querySelector('[data-view=\'upload\']').click()">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Upload New Log
+          </button>
+          <button class="btn btn-primary" onclick="document.querySelector('[data-view=\'ai-analyst\']').click()">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Ask Security AI
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body">
+        <!-- VIEW 1: EXECUTIVE DASHBOARD -->
+        <section class="view-section active" id="view-dashboard">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">Ingested Log Volume</div>
+              <div class="kpi-value" id="kpi-total-logs">--</div>
+              <div class="kpi-meta">Source: cj.log (226 MB)</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Unique Client IP Origins</div>
+              <div class="kpi-value" id="kpi-unique-ips">--</div>
+              <div class="kpi-meta">Distinct network nodes</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Confirmed Malicious Events</div>
+              <div class="kpi-value" id="kpi-attack-count" style="color:var(--accent-rose);">--</div>
+              <div class="kpi-meta" id="kpi-attack-pct">-- % total traffic</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Verified Benign Traffic</div>
+              <div class="kpi-value" id="kpi-benign-count" style="color:var(--accent-emerald);">--</div>
+              <div class="kpi-meta">Legitimate user browsing</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">High-Risk Offending Hosts</div>
+              <div class="kpi-value" id="kpi-suspicious-ips" style="color:var(--orange-bright);">--</div>
+              <div class="kpi-meta">Targeting vulnerable routes</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Automated Scanner Traffic</div>
+              <div class="kpi-value" id="kpi-bot-pct">--</div>
+              <div class="kpi-meta">Scanners / Web Crawlers</div>
+            </div>
+          </div>
+
+          <div class="grid-2col">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Hourly Traffic Velocity & Threat Ingress</div>
+                <span class="badge badge-sqli">Time Series</span>
+              </div>
+              <canvas id="trafficChart"></canvas>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Threat Attack Vector Breakdown</div>
+                <span class="badge badge-attack">3 Categories</span>
+              </div>
+              <div id="attack-bars-container" style="padding-top:10px;"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Top High-Density Attack Source IPs</div>
+              <span class="badge badge-sqli">Threat Actors</span>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Host IP</th>
+                    <th>Total Requests</th>
+                    <th>Attack Requests</th>
+                    <th>Attack Density</th>
+                    <th>Threat Level</th>
+                    <th>Investigation Action</th>
+                  </tr>
+                </thead>
+                <tbody id="top-ips-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: PIPELINE CONTROL CENTER -->
+        <section class="view-section" id="view-pipeline">
+          <div class="card" style="margin-bottom:22px;">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Data Pipeline Orchestration & Training Engine</div>
+                <p style="color:var(--text-secondary); font-size:12px; margin-top:4px;">Multi-stage asynchronous processor for continuous log ingestion, ETL, balancing, and model compilation.</p>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span id="pipeline-state-badge" class="badge badge-benign">IDLE</span>
+                <button class="btn btn-primary" id="btn-run-pipeline">Run Full Pipeline</button>
+              </div>
+            </div>
+            <div style="margin-top:10px;">
+              <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:8px;">
+                <span style="font-weight:600; color:var(--text-secondary);">Overall Execution Progress</span>
+                <span id="pipeline-progress-pct" style="font-family:var(--font-mono); color:var(--orange-bright);">100%</span>
+              </div>
+              <div style="width:100%; height:8px; background:#1c1c24; border-radius:4px; overflow:hidden;">
+                <div id="pipeline-progress-fill" style="width:100%; height:100%; background:var(--orange-primary); transition:width 0.3s;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-equal">
+            <div class="card">
+              <div class="card-header"><div class="card-title">Pipeline Architecture (9 Validated Stages)</div></div>
+              <div class="pipeline-stepper" id="pipeline-stepper-list"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><div class="card-title">Live Pipeline Execution Log Console</div></div>
+              <div class="log-console" id="pipeline-console">Waiting for pipeline trigger...</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: UPLOAD & INGEST NEW DATA / FILE -->
+        <section class="view-section" id="view-upload">
+          <div class="card" style="margin-bottom:22px;">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Universal Telemetry Ingestion & Real-Time Threat Scanner</div>
+                <p style="color:var(--text-secondary); font-size:12px; margin-top:4px;">Upload external logs (.log, .csv, .json, .txt) or paste raw streaming records. The engine auto-detects schemas, executes multi-vector regex tagging, and runs the trained Random Forest model.</p>
+              </div>
+            </div>
+
+            <!-- Ingestion Mode Selector Tabs -->
+            <div class="upload-tabs">
+              <button class="upload-tab active" id="tab-btn-file">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Drop File (.log, .csv, .json, .txt)
+              </button>
+              <button class="upload-tab" id="tab-btn-text">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Paste Raw Stream Buffer
+              </button>
+            </div>
+
+            <!-- Container A: File Drag & Drop Zone -->
+            <div id="container-file-upload">
+              <div class="upload-dropzone" id="file-dropzone">
+                <input type="file" id="file-input" style="display:none;" accept=".log,.csv,.json,.txt">
+                <div class="upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                </div>
+                <div class="upload-title">Drop your log file here, or <span style="color:var(--orange-bright);">browse to select</span></div>
+                <div class="upload-hint">Supports JSON Array access logs (cj.log), Delimited CSV matrices, or raw syslog text up to 500 MB</div>
+              </div>
+
+              <!-- Upload File Selected Status Box -->
+              <div id="file-selected-box" style="display:none; margin-top:16px; padding:16px; background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); align-items:center; justify-content:space-between;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="var(--orange-bright)" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <div>
+                    <div style="font-weight:700; color:var(--text-primary);" id="selected-filename">--</div>
+                    <div style="font-size:11px; color:var(--text-muted);" id="selected-filesize">--</div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" id="btn-process-upload">Execute Ingestion & Threat Analysis</button>
+              </div>
+            </div>
+
+            <!-- Container B: Paste Raw Text Buffer -->
+            <div id="container-text-upload" style="display:none;">
+              <div class="raw-text-container">
+                <textarea class="raw-text-textarea" id="raw-stream-input" placeholder='Paste raw log lines here... e.g.&#10;["1","1001","2023-01-08 08:07:15","104.28.209.153","443","Mozilla/5.0","en-US","GET /home HTTP/1.1"]&#10;["attack","admin&apos; OR 1=1--","2023-02-14 10:14:02","137.184.225.234","443","curl/7.68.0","en-US","POST /login HTTP/1.1"]'></textarea>
+                <div style="display:flex; justify-content:flex-end;">
+                  <button class="btn btn-primary" id="btn-process-text">Scan Raw Stream Buffer</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1-Click Instant Test Dataset Samples -->
+            <div class="sample-pills-section">
+              <div class="sample-pills-title">⚡ Instant Test Datasets (1-Click Evaluation):</div>
+              <div class="sample-pills-row">
+                <div class="sample-pill" id="btn-sample-normal">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="#10b981" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                  Benign Browsing Stream (10 Samples)
+                </div>
+                <div class="sample-pill" id="btn-sample-attack">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="#f43f5e" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg>
+                  Multi-Vector Cyber Attacks (SQLi & Traversal)
+                </div>
+                <div class="sample-pill" id="btn-sample-scanner">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="#ff7a00" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                  Automated Recon (Gobuster / Dirbuster)
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Cyber Scanning Progress Bar -->
+            <div class="scanning-terminal" id="scanning-terminal">
+              <div class="scanning-bar-row">
+                <span id="scan-phase-text" style="color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">CYBER ENGINE SCANNING...</span>
+                <span id="scan-phase-pct" style="color:var(--orange-bright); font-weight:700;">0%</span>
+              </div>
+              <div class="scanning-bar-bg">
+                <div class="scanning-bar-fill" id="scan-bar-fill"></div>
+              </div>
+              <div class="scanning-ticker" id="scan-ticker-log">Initializing heuristic vector analyzer...</div>
+            </div>
+          </div>
+
+          <!-- Dynamic Analysis Report Container (populated after upload) -->
+          <div id="upload-analysis-result" style="display:none;">
+            <div class="kpi-grid">
+              <div class="kpi-card">
+                <div class="kpi-title">Parsed Records</div>
+                <div class="kpi-value" id="up-parsed-records" style="color:var(--accent-emerald);">--</div>
+                <div class="kpi-meta" id="up-format-badge">Format Detected</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-title">Detected Threats</div>
+                <div class="kpi-value" id="up-total-threats" style="color:var(--accent-rose);">--</div>
+                <div class="kpi-meta" id="up-attack-pct">--% attack density</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-title">Unique Client IPs</div>
+                <div class="kpi-value" id="up-unique-ips">--</div>
+                <div class="kpi-meta">Distinct network origins</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-title">Malformed Records</div>
+                <div class="kpi-value" id="up-invalid-records" style="color:var(--text-muted);">--</div>
+                <div class="kpi-meta">Rejected syntax errors</div>
+              </div>
+            </div>
+
+            <div class="grid-2col">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Threat Assessment & Executive Briefing</div>
+                  <div style="display:flex; gap:8px;">
+                    <button class="btn btn-outline btn-sm" id="btn-export-json">Export Threat JSON</button>
+                    <button class="btn btn-primary btn-sm" id="btn-view-in-explorer">Explore in Log Table</button>
+                  </div>
+                </div>
+                <p id="up-threat-assessment" style="line-height:1.7; font-size:13.5px; color:var(--text-primary);"></p>
+                
+                <div style="margin-top:16px;">
+                  <strong style="color:var(--text-secondary); font-size:12px; text-transform:uppercase;">Identified Threat Vectors:</strong>
+                  <div id="up-attack-breakdown-tags" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;"></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header"><div class="card-title">Live Random Forest Inference on Sample Records</div></div>
+                <div id="up-model-predictions-list" style="display:flex; flex-direction:column; gap:8px;"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><div class="card-title">Top Offending IP Addresses in Uploaded Telemetry</div></div>
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Host IP</th>
+                      <th>Total Requests</th>
+                      <th>Threat Hits</th>
+                      <th>Attack Ratio</th>
+                      <th>Vector Types</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="up-offenders-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: LOG EXPLORER -->
+        <section class="view-section" id="view-explorer">
+          <div class="filter-bar">
+            <div class="input-group" style="flex-grow:1; min-width:220px;">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="var(--text-muted)" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="log-search-input" placeholder="Search IP, User-Agent, Sub-Key, or Route...">
+            </div>
+            <div class="input-group">
+              <select id="log-label-filter">
+                <option value="all">All Labels</option>
+                <option value="benign">Benign Only</option>
+                <option value="attack">All Attacks</option>
+                <option value="sqli">SQL Injection (sqli)</option>
+                <option value="path_traversal">Path Traversal</option>
+                <option value="brute_force">Brute Force</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <select id="log-client-filter">
+                <option value="all">All Clients</option>
+                <option value="chrome">Chrome</option>
+                <option value="mozilla">Mozilla</option>
+                <option value="firefox">Firefox</option>
+                <option value="gobuster">Gobuster Scanner</option>
+                <option value="dirbuster">Dirbuster Scanner</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <select id="log-bot-filter">
+                <option value="all">Bot Status (All)</option>
+                <option value="true">Automated Bots Only</option>
+                <option value="false">Human Browsers Only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Timestamp</th>
+                    <th>Client IP</th>
+                    <th>Port</th>
+                    <th>Label</th>
+                    <th>Bot?</th>
+                    <th>Client Type</th>
+                    <th>Req/IP</th>
+                  </tr>
+                </thead>
+                <tbody id="logs-table-body"></tbody>
+              </table>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:18px;">
+              <div id="log-page-info" style="color:var(--text-muted); font-size:12px; font-family:var(--font-mono);">Page 1 of 1</div>
+              <div style="display:flex; gap:8px;">
+                <button class="btn btn-outline btn-sm" id="log-prev-page">Previous</button>
+                <button class="btn btn-outline btn-sm" id="log-next-page">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: ATTACK INTELLIGENCE -->
+        <section class="view-section" id="view-attacks">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">SQL Injection (SQLi)</div>
+              <div class="kpi-value" style="color:var(--orange-bright);">176</div>
+              <div class="kpi-meta">Heuristics: ' OR 1=1, UNION SELECT</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Directory Path Traversal</div>
+              <div class="kpi-value" style="color:var(--accent-amber);">885</div>
+              <div class="kpi-meta">Heuristics: ../, ..\, %2e%2e</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Brute Force Authentication</div>
+              <div class="kpi-value" style="color:var(--accent-rose);">1,484</div>
+              <div class="kpi-meta">Frequency threshold &gt;= 5 attempts</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><div class="card-title">Attack Detection Signatures & Applied Heuristics</div></div>
+            <div style="display:flex; flex-direction:column; gap:16px; font-size:13.5px;">
+              <div style="background:var(--bg-secondary); padding:18px; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+                <strong style="color:var(--orange-bright);">1. SQL Injection Engine:</strong>
+                <p style="color:var(--text-secondary); margin-top:6px;">Monitors query strings, <code>category_type</code>, and <code>sub_key</code> parameters for SQL metacharacters and tautology statements: <code>'(\s*)or(\s*)1(\s*)=(\s*)1|union(\s+)select|drop(\s+)table|insert(\s+)into|--</code>.</p>
+              </div>
+              <div style="background:var(--bg-secondary); padding:18px; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+                <strong style="color:var(--accent-amber);">2. Path Traversal Engine:</strong>
+                <p style="color:var(--text-secondary); margin-top:6px;">Scans for directory breakout attempts targeting server root files: <code>\.\./|\.\.\\|%2e%2e</code> across all request payloads.</p>
+              </div>
+              <div style="background:var(--bg-secondary); padding:18px; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+                <strong style="color:var(--accent-rose);">3. Brute Force Auth Engine:</strong>
+                <p style="color:var(--text-secondary); margin-top:6px;">Identifies concentrated attempts against sensitive credentials endpoints: <code>login|signin|password|auth</code> with burst thresholds &gt;= 5 hits per IP.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 6: IP THREAT DOSSIER -->
+        <section class="view-section" id="view-ip-intel">
+          <div class="card" style="margin-bottom:22px;">
+            <div class="card-header"><div class="card-title">Threat Dossier Search</div></div>
+            <div style="display:flex; gap:14px;">
+              <input type="text" id="ip-search-input" class="form-control" placeholder="Enter IP Address (e.g. 14.139.122.76)..." style="max-width:350px;">
+              <button class="btn btn-primary" onclick="loadIPDetails(document.getElementById('ip-search-input').value)">Lookup IP</button>
+            </div>
+          </div>
+          <div class="card" id="ip-details-card">
+            <p style="color:var(--text-muted);">Enter an IP address above or click "Investigate" from the Executive Dashboard.</p>
+          </div>
+        </section>
+
+        <!-- VIEW 7: MACHINE LEARNING HUB -->
+        <section class="view-section" id="view-ml">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">Model Accuracy</div>
+              <div class="kpi-value" id="ml-accuracy" style="color:var(--orange-bright);">97.89%</div>
+              <div class="kpi-meta">Random Forest Classifier</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Attack F1-Score</div>
+              <div class="kpi-value" id="ml-f1">0.98</div>
+              <div class="kpi-meta">Balanced Harmonic Mean</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Attack Precision</div>
+              <div class="kpi-value" id="ml-precision">0.97</div>
+              <div class="kpi-meta">Low False Positive Rate</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Attack Recall (Sensitivity)</div>
+              <div class="kpi-value" id="ml-recall" style="color:var(--accent-emerald);">0.99</div>
+              <div class="kpi-meta">Catches 99% of Attacks</div>
+            </div>
+          </div>
+
+          <div class="grid-equal">
+            <div class="card">
+              <div class="card-header"><div class="card-title">Test Set Confusion Matrix (521 Held-Out Samples)</div></div>
+              <div id="ml-cm-container"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><div class="card-title">Top Feature Importances (Gini Impurity)</div></div>
+              <div id="ml-features-container"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Live Model Inference & Explainability Predictor</div>
+              <span class="badge badge-sqli">Real-Time Evaluation</span>
+            </div>
+            <form id="ml-predict-form" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px;">
+              <div class="form-group">
+                <label class="form-label">Requests per IP</label>
+                <input type="number" id="pred-requests" class="form-control" value="85" min="1">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Time Delta (Seconds)</label>
+                <input type="number" id="pred-time-delta" class="form-control" value="0.08" step="0.01" min="0">
+              </div>
+              <div class="form-group">
+                <label class="form-label">User-Agent Length</label>
+                <input type="number" id="pred-ua-len" class="form-control" value="22" min="1">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Unique UAs per IP</label>
+                <input type="number" id="pred-unique-ua" class="form-control" value="1" min="1">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Client Tool Type</label>
+                <select id="pred-client-type" class="form-control">
+                  <option value="gobuster">Gobuster Scanner</option>
+                  <option value="dirbuster">Dirbuster Scanner</option>
+                  <option value="chrome">Chrome Browser</option>
+                  <option value="firefox">Firefox Browser</option>
+                  <option value="mozilla">Mozilla Standard</option>
+                  <option value="command_line_tool">Curl / Python CLI</option>
+                </select>
+              </div>
+              <div class="form-group" style="display:flex; flex-direction:column; justify-content:center;">
+                <label class="form-label">Is Bot Scanner?</label>
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; color:var(--text-primary); font-size:13px;">
+                  <input type="checkbox" id="pred-is-bot" checked> Flagged Automated Scanner
+                </label>
+              </div>
+              <div style="grid-column: 1 / -1; margin-top:10px;">
+                <button type="submit" class="btn btn-primary">Run Live Model Prediction</button>
+              </div>
+            </form>
+
+            <div id="pred-result-box" style="display:none; margin-top:22px; padding:20px; background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+                <div style="font-size:16px; font-weight:700;">Result: <span id="pred-badge" class="badge">--</span></div>
+                <div style="font-size:13px; color:var(--text-muted);">Confidence: <strong id="pred-confidence" style="color:var(--text-primary);">--</strong> | Risk Score: <strong id="pred-risk-score" style="color:var(--orange-bright);">--</strong></div>
+              </div>
+              <div style="font-size:13px; font-weight:600; color:var(--text-secondary); margin-bottom:8px;">Explainable AI Evidence Attribution:</div>
+              <ul id="pred-evidence-list" style="padding-left:22px; font-size:13px; color:var(--text-primary); line-height:1.7;"></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 8: AI SECURITY ANALYST -->
+        <section class="view-section" id="view-ai-analyst">
+          <div class="chat-container">
+            <div class="prompt-chips">
+              <span class="chip" data-prompt="What happened in the logs?">Summarize overall attack activity</span>
+              <span class="chip" data-prompt="How many attacks were detected?">How many attacks were detected?</span>
+              <span class="chip" data-prompt="Which IPs generated suspicious activity?">Top suspicious IPs</span>
+              <span class="chip" data-prompt="Explain the machine learning model features">Explain model accuracy & features</span>
+              <span class="chip" data-prompt="What mitigation steps should I consider?">Recommended mitigation rules</span>
+            </div>
+
+            <div class="chat-history" id="chat-messages">
+              <div class="chat-bubble chat-bubble-ai">
+                <strong>SENTINEL AI Security Analyst Active</strong><br>
+                I am directly connected to your live log analytics engine and trained Random Forest model. Ask any question regarding threat activity, offending IP addresses, detection metrics, or remediation strategies.
+              </div>
+            </div>
+
+            <div class="chat-input-area">
+              <input type="text" id="ai-input-text" class="form-control" placeholder="Ask the Security AI about telemetry, threat actors, or attacks...">
+              <button class="btn btn-primary" id="ai-send-btn">Send</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 9: INCIDENT WORKSPACE -->
+        <section class="view-section" id="view-incident">
+          <div class="card" style="margin-bottom:22px;">
+            <div class="card-header"><div class="card-title">Automated Incident Triage & Firewall Mitigation Generator</div></div>
+            <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center;">
+              <input type="text" id="incident-ip-input" class="form-control" value="14.139.122.76" placeholder="IP Address..." style="max-width:250px;">
+              <select id="incident-type-input" class="form-control" style="max-width:250px;">
+                <option value="SQL Injection">SQL Injection Probe</option>
+                <option value="Directory Path Traversal">Directory Path Traversal</option>
+                <option value="Brute Force Authentication">Brute Force Authentication</option>
+                <option value="Automated Scanner">Automated Scanner</option>
+              </select>
+              <button class="btn btn-primary" id="incident-generate-btn">Synthesize Remediation Plan</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><div class="card-title">Generated Mitigation & Security Directives</div></div>
+            <div style="display:flex; flex-direction:column; gap:18px;">
+              <div>
+                <strong style="color:var(--text-secondary); font-size:11px; text-transform:uppercase; font-family:var(--font-mono);">Threat Severity:</strong>
+                <span id="mitigation-severity" class="badge badge-attack" style="margin-left:8px;">CRITICAL</span>
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="color:var(--text-secondary); font-size:11px; text-transform:uppercase; font-family:var(--font-mono);">Gateway Firewall Rule (Linux iptables):</strong>
+                  <button class="btn btn-outline btn-sm" onclick="copyText('mitigation-iptables')">Copy Rule</button>
+                </div>
+                <pre class="mono-cell" id="mitigation-iptables" style="background:#000; padding:14px; border:1px solid var(--border-subtle); border-radius:4px; margin-top:6px; color:var(--accent-emerald); overflow-x:auto;">iptables -A INPUT -s 14.139.122.76 -p tcp --dport 80,443 -j DROP</pre>
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="color:var(--text-secondary); font-size:11px; text-transform:uppercase; font-family:var(--font-mono);">Web Application Firewall (ModSecurity Rule):</strong>
+                  <button class="btn btn-outline btn-sm" onclick="copyText('mitigation-waf')">Copy Rule</button>
+                </div>
+                <pre class="mono-cell" id="mitigation-waf" style="background:#000; padding:14px; border:1px solid var(--border-subtle); border-radius:4px; margin-top:6px; color:var(--orange-bright); overflow-x:auto;">SecRule ARGS "@rx (?i)(\\bunion\\b.*\\bselect\\b|\\bselect\\b.*\\bfrom\\b|1=1|--)" "id:10001,phase:2,deny,status:403,log,msg:'SQL Injection Attempt'"</pre>
+              </div>
+              <div>
+                <strong style="color:var(--text-secondary); font-size:11px; text-transform:uppercase; font-family:var(--font-mono);">Immediate SOC Action Items:</strong>
+                <ul id="mitigation-actions" style="margin-top:8px; padding-left:22px; font-size:13.5px; color:var(--text-primary); line-height:1.8;">
+                  <li>Immediately block IP 14.139.122.76 at gateway firewall</li>
+                  <li>Review database access logs for queries executed from this session</li>
+                  <li>Enable prepared statements / parameterized queries across all dynamic filters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 10: DATA QUALITY -->
+        <section class="view-section" id="view-quality">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">Data Ingestion Integrity</div>
+              <div class="kpi-value" id="dq-valid-rate" style="color:var(--accent-emerald);">99.96%</div>
+              <div class="kpi-meta">2,060,520 valid records</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Structured Records</div>
+              <div class="kpi-value" id="dq-valid-records">2,060,520</div>
+              <div class="kpi-meta">Standard 8 columns</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Malformed Records</div>
+              <div class="kpi-value" id="dq-invalid-records" style="color:var(--text-muted);">911</div>
+              <div class="kpi-meta">Corrupted JSON strings</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Unique Client IPs</div>
+              <div class="kpi-value" id="dq-unique-ips">16,680</div>
+              <div class="kpi-meta">Global network nodes</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><div class="card-title">Dataset Temporal Bounds & Quality Metrics</div></div>
+            <p><strong>Earliest Recorded Timestamp:</strong> <span id="dq-time-start" class="mono-cell">2023-01-08 08:07:15</span></p>
+            <p style="margin-top:8px;"><strong>Latest Recorded Timestamp:</strong> <span id="dq-time-end" class="mono-cell">2024-02-19 21:44:01</span></p>
+            <p style="margin-top:8px;"><strong>Raw Source Dataset:</strong> <code class="mono-cell">D:\PDS PRACTICAL\Logs\logs\cj.log</code> (~226 MB)</p>
+          </div>
+        </section>
+
+        <!-- VIEW 11: SYSTEM HEALTH -->
+        <section class="view-section" id="view-system">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-title">FastAPI Backend Status</div>
+              <div class="kpi-value" id="sys-backend-status" style="color:var(--accent-emerald);">OPERATIONAL</div>
+              <div class="kpi-meta">Port 8000 (Local Uvicorn)</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">ML Classifier State</div>
+              <div class="kpi-value" id="sys-model-status" style="color:var(--orange-bright);">READY</div>
+              <div class="kpi-meta">RandomForestClassifier v1.0.0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Output Datasets Footprint</div>
+              <div class="kpi-value" id="sys-disk-usage">-- MB</div>
+              <div class="kpi-meta">Practicals 1–10 Artifacts</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><div class="card-title">Export Verified Datasets (Direct Binary & CSV Downloads)</div></div>
+            <div style="display:flex; flex-wrap:wrap; gap:12px;">
+              <a href="/api/system/export/balanced" class="btn btn-outline" download>Download Balanced Dataset CSV (Pr-6)</a>
+              <a href="/api/system/export/predictions" class="btn btn-outline" download>Download Test Predictions CSV (Pr-9)</a>
+              <a href="/api/system/export/ip_frequency" class="btn btn-outline" download>Download IP Frequency CSV (Pr-7)</a>
+              <a href="/api/system/export/pipeline_summary" class="btn btn-outline" download>Download Pipeline Summary TXT (Pr-10)</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal for Log Inspector -->
+  <div class="modal-overlay" id="log-modal">
+    <div class="modal-card">
+      <div class="card-header">
+        <div class="card-title">Log Telemetry Deep Inspector</div>
+        <button class="btn btn-outline btn-sm" onclick="closeLogModal()">✕</button>
+      </div>
+      <div id="log-modal-details"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast">Notification message</div>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

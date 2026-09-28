@@ -1,0 +1,21 @@
+PRACTICAL 8 - DATA VISUALIZATION AND EDA
+=================================================================
+
+Objective:
+To use visualization techniques to understand the balanced network log dataset.
+
+Visualizations performed:
+1. Requests per hour
+2. Top 10 attacking IP addresses
+3. Attack categories over time
+4. Status-code distribution when available
+5. IP vs request-category heatmap
+6. Label distribution
+7. Bot vs non-bot traffic
+8. Interactive Plotly visualization
+
+Dataset Limitation:
+The supplied cj.log dataset does not contain an explicit HTTP status-code field or standard HTTP request method field such as GET or POST. Therefore those visualizations are skipped or replaced with analysis using available fields.
+
+Conclusion:
+Data visualization and EDA helped identify traffic patterns, attack frequency, temporal trends, and relationships between IP addresses and request categories.

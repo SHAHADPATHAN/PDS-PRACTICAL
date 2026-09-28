@@ -1,17 +1,32 @@
-# Ignore Logs directory and Jupyter checkpoints
+# Raw Logs & Large Intermediate Dumps (exceeding GitHub 100MB limit)
 Logs/
-.ipynb_checkpoints/
-checkpoints/
+Practical-1/output/extracted_fields.csv
+Practical-2/output/cj_cleaned.csv
+Practical-3/output/cj_preprocessed.csv
+Practical-4/output/labeled_logs.csv
+Practical-5/output/feature_engineered_logs.csv
+Practical-10/output/processed_logs.csv
+
+# Python runtime & caches
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
 
-# Exclude large datasets over GitHub 100MB limit
-*.csv
-!Practical-1/output/sample_logs.csv
-!Practical-2/output/field_description.csv
-!Practical-2/output/structured_sample.csv
+# Jupyter & IDE
+.ipynb_checkpoints/
+checkpoints/
+.vscode/
+.idea/
 
-# OS & temp files
+# OS and temporary files
 Thumbs.db
 desktop.ini
 .DS_Store
+*.tmp
+test_sample.log
+scratch/

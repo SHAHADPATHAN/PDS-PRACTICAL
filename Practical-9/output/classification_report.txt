@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+      Benign       0.99      0.97      0.98       261
+      Attack       0.97      0.99      0.98       260
+
+    accuracy                           0.98       521
+   macro avg       0.98      0.98      0.98       521
+weighted avg       0.98      0.98      0.98       521

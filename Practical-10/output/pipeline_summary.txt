@@ -1,0 +1,25 @@
+PRACTICAL 10 - REUSABLE DATA PIPELINE
+============================================================
+
+Input file: D:\PDS PRACTICAL\Logs\logs\cj.log
+Total raw lines: 2062365
+Successfully parsed: 2060520
+Invalid records: 911
+Final records: 2060520
+Final columns: 15
+
+Pipeline stages:
+1. Loading logs
+2. Parsing and structuring
+3. Labeling
+4. Preprocessing
+5. Feature engineering
+6. Saving CSV and Parquet outputs
+
+Final label distribution:
+label
+benign            2057975
+brute_force          1484
+path_traversal        885
+sqli                  176
+Name: count, dtype: int64

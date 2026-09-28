@@ -1,0 +1,91 @@
+{
+  "model_name": "RandomForestClassifier",
+  "model_version": "1.0.0",
+  "training_date": "2026-09-28",
+  "dataset_source": "Practical-6/output/balanced_dataset.csv",
+  "total_samples": 2604,
+  "train_samples": 2083,
+  "test_samples": 521,
+  "accuracy": 0.9788867562380038,
+  "confusion_matrix": [
+    [
+      253,
+      8
+    ],
+    [
+      3,
+      257
+    ]
+  ],
+  "classification_report": {
+    "Benign": {
+      "precision": 0.98828125,
+      "recall": 0.9693486590038314,
+      "f1-score": 0.9787234042553191,
+      "support": 261.0
+    },
+    "Attack": {
+      "precision": 0.969811320754717,
+      "recall": 0.9884615384615385,
+      "f1-score": 0.979047619047619,
+      "support": 260.0
+    },
+    "accuracy": 0.9788867562380038,
+    "macro avg": {
+      "precision": 0.9790462853773585,
+      "recall": 0.9789050987326849,
+      "f1-score": 0.9788855116514691,
+      "support": 521.0
+    },
+    "weighted avg": {
+      "precision": 0.9790640108372868,
+      "recall": 0.9788867562380038,
+      "f1-score": 0.9788852005048353,
+      "support": 521.0
+    }
+  },
+  "feature_names": [
+    "requests_per_ip",
+    "time_between_requests",
+    "user_agent_length",
+    "unique_user_agents_per_ip",
+    "client_type_chrome",
+    "client_type_dirbuster",
+    "client_type_firefox",
+    "client_type_go-http-client",
+    "client_type_gobuster",
+    "client_type_mozilla",
+    "client_type_other",
+    "client_type_python",
+    "client_type_safari",
+    "is_bot_False",
+    "is_bot_True"
+  ],
+  "numeric_features": [
+    "requests_per_ip",
+    "time_between_requests",
+    "user_agent_length",
+    "unique_user_agents_per_ip"
+  ],
+  "categorical_features": [
+    "client_type",
+    "is_bot"
+  ],
+  "feature_importances": {
+    "client_type_mozilla": 0.2292408203245633,
+    "is_bot_False": 0.16963165344518186,
+    "unique_user_agents_per_ip": 0.16396015066513062,
+    "is_bot_True": 0.1444137732812478,
+    "requests_per_ip": 0.12950829291969213,
+    "user_agent_length": 0.07084737998780696,
+    "client_type_gobuster": 0.03479969783317482,
+    "time_between_requests": 0.01953036820395393,
+    "client_type_dirbuster": 0.014053497405723234,
+    "client_type_chrome": 0.013530722809745382,
+    "client_type_other": 0.0034112497172585,
+    "client_type_python": 0.003272522712448301,
+    "client_type_firefox": 0.003053816816751494,
+    "client_type_safari": 0.0007460538773217401,
+    "client_type_go-http-client": 0.0
+  }
+}

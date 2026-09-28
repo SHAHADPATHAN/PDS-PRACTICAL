@@ -1,0 +1,22 @@
+======================================================================
+PRACTICAL 5 : FEATURE ENGINEERING
+======================================================================
+
+Objective:
+Create meaningful features for anomaly detection and suspicious activity analysis.
+
+Total Records: 1,491,163
+
+Features Created:
+
+1. Requests per IP
+2. Time between requests
+3. Status code frequency - not available because the dataset does not contain status codes.
+4. User-agent/client type
+5. Bot/automated client indicator
+6. URL entropy - not available because the dataset does not contain URL fields.
+7. User-agent length
+8. Unique user-agents per IP
+
+Dataset Limitation:
+The supplied cj.log dataset does not contain explicit HTTP status-code or URL fields. Therefore, those features are generated only when the corresponding columns are available.

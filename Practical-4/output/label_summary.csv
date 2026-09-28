@@ -1,0 +1,5 @@
+label,count,percentage
+benign,1489861,99.91
+path_traversal,1062,0.07
+brute_force,130,0.01
+sqli,110,0.01

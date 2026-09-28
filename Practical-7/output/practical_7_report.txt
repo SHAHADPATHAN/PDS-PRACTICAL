@@ -1,0 +1,23 @@
+PRACTICAL 7 - DATA WRANGLING
+============================================================
+
+Objective:
+To aggregate, reshape and filter the balanced dataset for deeper analysis.
+
+1. IP-wise Attack Frequency
+The dataset was grouped by Client-IP-address to calculate total requests and attack frequency.
+
+2. Time-Series Analysis
+Traffic was resampled into hourly and daily time intervals.
+
+3. Pivot Table
+A pivot table was created between category_type and label when category_type was available.
+
+4. Bot Filtering
+Bot traffic was identified using the is_bot field or User-Agent patterns.
+
+5. Internal IP Filtering
+Private IPv4 ranges such as 10.x.x.x, 172.16.x.x-172.31.x.x and 192.168.x.x were filtered out.
+
+Conclusion:
+The balanced dataset was successfully transformed into aggregated and filtered datasets suitable for deeper traffic and attack analysis.
